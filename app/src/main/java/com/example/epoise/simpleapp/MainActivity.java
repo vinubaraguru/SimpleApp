@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-        // Set Tabs inside Toolbar
+
+
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
