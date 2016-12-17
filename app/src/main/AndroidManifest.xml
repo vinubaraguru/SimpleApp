@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.epoise.simpleapp">
+    package="com.vinu.epoise.ePoiseRecruiter">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,40 +19,40 @@
         </activity>
 
         <activity
-            android:name=".activity.WelcomeActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.WelcomeActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name=".activity.LoginActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.LoginActivity"
             android:label="@string/title_activity_login">
         </activity>
         <activity
-            android:name=".activity.ResetPasswordActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.ResetPasswordActivity"
             android:label="@string/title_activity_reset_password">
         </activity>
 
         <activity
-            android:name=".activity.OrganizationListActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.OrganizationListActivity"
             android:label="@string/title_activity_organization_list">
         </activity>
 
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.MainActivity"
             android:theme="@style/AppTheme">
         </activity>
 
         <activity
-            android:name=".activity.InviteOppDetailActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.InviteOppDetailActivity"
             android:label="@string/title_activity_invite_opp_detail">
         </activity>
 
         <activity
-            android:name=".activity.HiringOppDetailActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.HiringOppDetailActivity"
             android:label="@string/title_activity_hiring_opp_detail">
         </activity>
 
         <activity
-            android:name=".activity.TrainingOppDetailActivity"
+            android:name="com.vinu.epoise.ePoiseRecruiter.activity.TrainingOppDetailActivity"
             android:label="@string/title_activity_training_opp_detail">
         </activity>
     </application>
