@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="@dimen/md_keylines">
+
+    <ImageView
+        android:id="@+id/opp_image"
+        android:layout_width="@dimen/avator_size"
+        android:layout_height="@dimen/avator_size"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/messi" />
+
+    <TextView
+        android:id="@+id/opp_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/md_keylines"
+        tools:text="Tittle"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="@dimen/article_subheading"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/opp_image"/>
+
+    <TextView
+        android:id="@+id/opp_published_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:textColor="@color/album_title"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="Description"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="@dimen/list_body"
+        android:layout_below="@+id/opp_title"
+        android:layout_toEndOf="@+id/opp_image"/>
+
+</RelativeLayout>

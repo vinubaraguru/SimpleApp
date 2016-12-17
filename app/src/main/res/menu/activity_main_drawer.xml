@@ -3,33 +3,56 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_dashboard"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Dashboard"/>
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_invites"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Invites"/>
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_hiring"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Hiring"/>
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_training"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Training"/>
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="My Account">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_my_organization"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="My organization"/>
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_manage_users"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Manage Users"/>
+
+            <item
+                android:id="@+id/nav_vendor_report"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Vendor Reports"/>
+            <item
+                android:id="@+id/nav_evaluators_report"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Evaluators Report"/>
+
+            <item
+                android:id="@+id/nav_candidates_report"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Candidates Report"/>
+            <item
+                android:id="@+id/nav_position_based_report"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Positions Based Report"/>
+
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Settings"/>
         </menu>
     </item>
 
