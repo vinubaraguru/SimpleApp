@@ -1,6 +1,7 @@
 package com.vinu.epoise.ePoiseRecruiter.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vinu.epoise.ePoiseRecruiter.R;
+import com.vinu.epoise.ePoiseRecruiter.activity.HiringCandidateResponseActivity;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
 import com.vinu.epoise.ePoiseRecruiter.model.HiringAppliedCandidateList;
 import com.squareup.picasso.Picasso;
@@ -60,6 +62,9 @@ public class HiringAppliedCandidateRecyclerViewAdapter extends RecyclerView.Adap
                 HiringAppliedCandidateList selectedHiringAppliedCandidateList = getSelectedHiringAppliedCandidateList(Position);
 
                 Toast.makeText(mContext, selectedHiringAppliedCandidateList.getAppliedCandidateName(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(mContext,HiringCandidateResponseActivity.class);
+                mContext.startActivity(intent);
             }
         });
     }
