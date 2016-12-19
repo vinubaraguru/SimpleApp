@@ -8,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.adapter.HiringCandidateResponseRecyclerViewAdapter;
@@ -15,14 +17,13 @@ import com.vinu.epoise.ePoiseRecruiter.model.HiringCandidateResponse;
 
 import java.util.ArrayList;
 
-public class HiringCandidateResponseActivity extends AppCompatActivity {
+public class HiringCandidateResponseActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ArrayList<HiringCandidateResponse> mHiringCandidateResponseArrayList = new ArrayList<>();
 
     private HiringCandidateResponseRecyclerViewAdapter mHiringCandidateResponseRecyclerViewAdapter;
     private RecyclerView mRecyclerView;
-
-
+    private Button rejectButton,shortListButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +36,11 @@ public class HiringCandidateResponseActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Evaluation");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        rejectButton=(Button) findViewById(R.id.reject);
+        shortListButton=(Button)findViewById(R.id.shortlist);
+
+        rejectButton.setOnClickListener(this);
+        shortListButton.setOnClickListener(this);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.hiring_cand_response_recycler_view);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -61,7 +59,7 @@ public class HiringCandidateResponseActivity extends AppCompatActivity {
         HiringCandidateResponse hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.VIDEO_TYPE,"Do you believe on Luck and do you depend on it?","http://www.androidbegin.com/tutorial/AndroidCommercial.3gp");
         mHiringCandidateResponseArrayList.add(hiringCandidateResponse);
 
-        hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.SINGLE_TYPE,"Please respond to the following question in Hindi.Do you believe on Luck and do you depend on it?","B");
+        hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.MULTI_TYPE,"Please respond to the following question in Hindi.Do you believe on Luck and do you depend on it?","B");
         mHiringCandidateResponseArrayList.add(hiringCandidateResponse);
 
         hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.SINGLE_TYPE,"Do you believe on Luck and do you depend on it?","C");
@@ -81,4 +79,20 @@ public class HiringCandidateResponseActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View view) {
+        rejectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Reject",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        shortListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Shortlist",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 }

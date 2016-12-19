@@ -37,29 +37,19 @@
             android:textColor="@color/dark_grey"
             android:textSize="@dimen/article_subheading" />
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox1"
-            android:layout_below="@+id/multiple_choice_question_description"
-            android:layout_marginLeft="@dimen/md_keylines"
-            android:layout_marginBottom="@dimen/md_keylines"
-            android:layout_marginRight="@dimen/md_keylines"
-            android:text="Option 1"
-            android:layout_gravity="center_horizontal"
-            android:checked="false"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiple_choice_options_layout"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:layout_marginBottom="@dimen/md_keylines"
+        android:layout_marginRight="@dimen/md_keylines"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/black_alpha_40"
+        android:orientation="vertical">
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox2"
-            android:layout_below="@+id/multiple_choice_question_description"
-            android:layout_marginLeft="@dimen/md_keylines"
-            android:layout_marginBottom="@dimen/md_keylines"
-            android:layout_marginRight="@dimen/md_keylines"
-            android:text="Option 1"
-            android:layout_gravity="center_horizontal"
-            android:checked="false"/>
+
+        </LinearLayout>
 
 
     </LinearLayout>

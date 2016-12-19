@@ -32,4 +32,42 @@
         <!--android:layout_margin="@dimen/fab_margin"-->
         <!--app:srcCompat="@android:drawable/ic_dialog_email"/>-->
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/mLlayoutBottomButtons" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mLlayoutBottomButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/reject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_screen4"
+                android:layout_weight="1"
+                android:text="Reject"
+                android:elevation="14dp"/>
+
+            <Button
+                android:id="@+id/shortlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/bg_screen2"
+                android:text="Shortlist"
+                android:elevation="14dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
 </android.support.design.widget.CoordinatorLayout>

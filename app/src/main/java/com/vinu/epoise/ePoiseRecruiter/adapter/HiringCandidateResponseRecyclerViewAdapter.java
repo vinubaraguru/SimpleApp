@@ -2,12 +2,15 @@ package com.vinu.epoise.ePoiseRecruiter.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -56,7 +59,7 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
 
             case MULTI_TYPE:
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.multiple_choice_response_list, parent, false);
-                return new SingleChoiceResponseViewHolder(view);
+                return new MultipleChoiceResponseViewHolder(view);
         }
         return null;
     }
@@ -103,7 +106,10 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
                         RadioButton rbn = new RadioButton(mContext.getApplicationContext());
                         rbn.setId(1 + 1000);
                         rbn.setText("RadioButton" + i);
-                        rbn.setTextColor(mContext.getResources().getColor(R.color.colorAccent));
+//                        rbn.setBackgroundColor(Color.BLUE);
+                        rbn.setButtonDrawable(R.drawable.ic_radio_button_checked);
+                        rbn.setTextColor(Color.RED);
+                        rbn.setHighlightColor(Color.GREEN);
                         ((SingleChoiceResponseViewHolder) holder).singleTypeQuestionOptions.addView(rbn);
 
                     }
@@ -113,6 +119,18 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
                 case MULTI_TYPE:
                     ((MultipleChoiceResponseViewHolder) holder).multiTypeQuestionNo.setText("Question 1 of 1");
                     ((MultipleChoiceResponseViewHolder) holder).multiTypeQuestionName.setText(hiringCandidateResponse.getQuestionName());
+
+                    for(int i=0;i<3;i++){
+
+                        CheckBox checkBox = new CheckBox(mContext.getApplicationContext());
+                        checkBox.setText("Checkbox");
+//                        checkBox.setBackgroundColor(Color.BLUE);
+                        checkBox.setButtonDrawable(R.drawable.ic_check_box_unchecked);
+                        checkBox.setTextColor(Color.RED);
+                        checkBox.setHighlightColor(Color.GREEN);
+                        ((MultipleChoiceResponseViewHolder) holder).multiTypeOptionLayout.addView(checkBox);
+
+                    }
                     break;
 
             }
@@ -190,12 +208,14 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
 
         private TextView multiTypeQuestionNo;
         private TextView multiTypeQuestionName;
+        private LinearLayout multiTypeOptionLayout;
 
         public MultipleChoiceResponseViewHolder(View itemView) {
             super(itemView);
 
             multiTypeQuestionNo = (TextView) itemView.findViewById(R.id.multiple_choice_question_no);
             multiTypeQuestionName = (TextView) itemView.findViewById(R.id.multiple_choice_question_description);
+            multiTypeOptionLayout= (LinearLayout) itemView.findViewById(R.id.multiple_choice_options_layout);
 
         }
     }
