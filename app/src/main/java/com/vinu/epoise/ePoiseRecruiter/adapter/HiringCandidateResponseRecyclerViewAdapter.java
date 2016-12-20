@@ -7,14 +7,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.vinu.epoise.ePoiseRecruiter.R;
@@ -50,15 +48,15 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
         switch (viewType) {
 
             case VIDEO_TYPE:
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.video_response_list, parent, false);
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hiring_video_response_list, parent, false);
                 return new VideoResponseViewHolder(view);
 
             case SINGLE_TYPE:
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_choice_response_list, parent, false);
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hiring_single_choice_response_list, parent, false);
                 return new SingleChoiceResponseViewHolder(view);
 
             case MULTI_TYPE:
-                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.multiple_choice_response_list, parent, false);
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hiring_multiple_choice_response_list, parent, false);
                 return new MultipleChoiceResponseViewHolder(view);
         }
         return null;
@@ -172,9 +170,9 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
 
         public VideoResponseViewHolder(View itemView) {
             super(itemView);
-            videoTypeQuestionNo= (TextView) itemView.findViewById(R.id.video_question_no);
-            videoTypeQuestionName = (TextView) itemView.findViewById(R.id.video_question_description);
-            videoTypeImageView =(ImageView) itemView.findViewById(R.id.video_question_video_image);
+            videoTypeQuestionNo= (TextView) itemView.findViewById(R.id.hiring_video_question_no);
+            videoTypeQuestionName = (TextView) itemView.findViewById(R.id.hiring_video_question_description);
+            videoTypeImageView =(ImageView) itemView.findViewById(R.id.hiring_video_question_video_image);
 
             itemView.setOnClickListener(this);
         }
@@ -197,9 +195,9 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
 
         public SingleChoiceResponseViewHolder(View itemView) {
             super(itemView);
-            singleTypeQuestionNo = (TextView) itemView.findViewById(R.id.single_choice_question_no);
-            singleTypeQuestionName = (TextView) itemView.findViewById(R.id.single_choice_question_description);
-            singleTypeQuestionOptions = (RadioGroup) itemView.findViewById(R.id.radioGroup);
+            singleTypeQuestionNo = (TextView) itemView.findViewById(R.id.hiring_single_choice_question_no);
+            singleTypeQuestionName = (TextView) itemView.findViewById(R.id.hiring_single_choice_question_description);
+            singleTypeQuestionOptions = (RadioGroup) itemView.findViewById(R.id.hiring_radio_group);
 
         }
     }
@@ -213,9 +211,9 @@ public class HiringCandidateResponseRecyclerViewAdapter extends RecyclerView.Ada
         public MultipleChoiceResponseViewHolder(View itemView) {
             super(itemView);
 
-            multiTypeQuestionNo = (TextView) itemView.findViewById(R.id.multiple_choice_question_no);
-            multiTypeQuestionName = (TextView) itemView.findViewById(R.id.multiple_choice_question_description);
-            multiTypeOptionLayout= (LinearLayout) itemView.findViewById(R.id.multiple_choice_options_layout);
+            multiTypeQuestionNo = (TextView) itemView.findViewById(R.id.hiring_multiple_choice_question_no);
+            multiTypeQuestionName = (TextView) itemView.findViewById(R.id.hiring_multiple_choice_question_description);
+            multiTypeOptionLayout= (LinearLayout) itemView.findViewById(R.id.hiring_multiple_choice_options_layout);
 
         }
     }

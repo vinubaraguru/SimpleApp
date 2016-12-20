@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/video_question_no"
+            android:id="@+id/training_single_choice_question_no"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_title_height"
             android:layout_marginLeft="@dimen/md_keylines"
@@ -26,10 +26,10 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
         <TextView
-            android:id="@+id/video_question_description"
+            android:id="@+id/training_single_choice_question_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/video_question_no"
+            android:layout_below="@+id/training_single_choice_question_no"
             android:layout_marginLeft="@dimen/md_keylines"
             android:layout_marginBottom="@dimen/md_keylines"
             android:layout_marginRight="@dimen/md_keylines"
@@ -38,13 +38,35 @@
             android:textColor="@color/dark_grey"
             android:textSize="@dimen/article_subheading" />
 
-        <ImageView
-            android:id="@+id/video_question_video_image"
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_below="@+id/video_question_description"
-            android:scaleType="centerCrop"
-            tools:src="@drawable/videoimage" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/training_single_choice_question_description"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:checked="true"
+            android:buttonTint="@color/black_alpha_40"
+            android:weightSum="1"
+            android:id="@+id/training_radio_group">
+
+            <!--<RadioButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Option 1"-->
+            <!--android:id="@+id/radioButton"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:checked="false"/>-->
+
+            <!--<RadioButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Option 2"-->
+            <!--android:id="@+id/radioButton2"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:checked="false"/>-->
+
+        </RadioGroup>
 
     </LinearLayout>
 

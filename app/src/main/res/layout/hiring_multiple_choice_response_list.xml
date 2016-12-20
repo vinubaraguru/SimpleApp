@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/multiple_choice_question_no"
+            android:id="@+id/hiring_multiple_choice_question_no"
             android:layout_width="match_parent"
             android:layout_height="@dimen/card_title_height"
             android:layout_marginLeft="@dimen/md_keylines"
@@ -26,10 +26,10 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
         <TextView
-            android:id="@+id/multiple_choice_question_description"
+            android:id="@+id/hiring_multiple_choice_question_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/multiple_choice_question_no"
+            android:layout_below="@+id/hiring_multiple_choice_question_no"
             android:layout_marginLeft="@dimen/md_keylines"
             android:layout_marginBottom="@dimen/md_keylines"
             android:layout_marginRight="@dimen/md_keylines"
@@ -40,7 +40,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/multiple_choice_options_layout"
+        android:id="@+id/hiring_multiple_choice_options_layout"
         android:layout_marginLeft="@dimen/md_keylines"
         android:layout_marginBottom="@dimen/md_keylines"
         android:layout_marginRight="@dimen/md_keylines"
