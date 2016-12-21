@@ -8,10 +8,10 @@ import java.io.Serializable;
 
 public class TrainingCandidateResponse implements Serializable {
 
-    public static final int VIDEO_TYPE = 0;
-    public static final int SINGLE_TYPE = 1;
-    public static final int MULTI_TYPE = 2;
-    public static final int WRITTEN_TYPE = 3;
+    public static final int TRAINING_VIDEO_TYPE = 0;
+    public static final int TRAINING_SINGLE_TYPE = 1;
+    public static final int TRAINING_MULTI_TYPE = 2;
+    public static final int TRAINING_WRITTEN_TYPE = 3;
 
 
     private int trainingResponseType;

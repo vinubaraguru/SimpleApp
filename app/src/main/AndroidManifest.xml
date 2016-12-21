@@ -55,6 +55,13 @@
             android:label="@string/title_activity_hiring_candidate_response"
             android:theme="@style/AppTheme">
         </activity>
+
+        <activity
+            android:name=".activity.TrainingCandidateResponseActivity"
+            android:label="@string/title_activity_training_candidate_response"
+            android:theme="@style/AppTheme">
+        </activity>
+
         <activity android:name=".activity.VideoStreamingActivity"
                   android:label="@string/title_activity_video_streaming"
                   android:theme="@style/AppTheme">

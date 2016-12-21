@@ -1,6 +1,7 @@
 package com.vinu.epoise.ePoiseRecruiter.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vinu.epoise.ePoiseRecruiter.R;
+import com.vinu.epoise.ePoiseRecruiter.activity.TrainingCandidateResponseActivity;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
 import com.vinu.epoise.ePoiseRecruiter.model.TrainingAppliedCandidateList;
 import com.squareup.picasso.Picasso;
@@ -55,19 +57,23 @@ public class TrainingAppliedCandidatesRecyclerViewAdapter extends RecyclerView.A
             @Override
             public void onItemClick(View view, int Position) {
 
-                TrainingAppliedCandidateList trainingAppliedCandidateList=mTrainingAppliedCandidateList.get(Position);
+                TrainingAppliedCandidateList trainingAppliedCandidateList = mTrainingAppliedCandidateList.get(Position);
 
-                TrainingAppliedCandidateList selectedTrainingAppliedCandidateList= getSelectedTrainingAppliedCandidateList(Position);
+                TrainingAppliedCandidateList selectedTrainingAppliedCandidateList = getSelectedTrainingAppliedCandidateList(Position);
 
-                Toast.makeText(mContext,selectedTrainingAppliedCandidateList.getTrainingCandidateName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, selectedTrainingAppliedCandidateList.getTrainingCandidateName(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(mContext, TrainingCandidateResponseActivity.class);
+                mContext.startActivity(intent);
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return mTrainingAppliedCandidateList.size();
-    }
+            return mTrainingAppliedCandidateList.size();
+        }
+
 
     public TrainingAppliedCandidateList getSelectedTrainingAppliedCandidateList(int position) {
         return mTrainingAppliedCandidateList.get(position);

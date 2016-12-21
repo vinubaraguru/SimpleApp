@@ -63,6 +63,7 @@
     <string name="title_activity_hiring_opp_detail">HiringOppDetailActivity</string>
     <string name="title_activity_training_opp_detail">TrainingOppDetailActivity</string>
     <string name="title_activity_hiring_candidate_response">HiringCandidateResponseActivity</string>
+    <string name="title_activity_training_candidate_response">TrainingCandidateResponseActivity</string>
     <string name="title_activity_video_streaming">VideoStreamingActivity</string>
 
 </resources>
