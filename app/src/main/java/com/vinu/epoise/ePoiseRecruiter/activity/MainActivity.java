@@ -19,6 +19,7 @@ import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.fragment.DashBoardFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.HiringOppListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.InviteListFragment;
+import com.vinu.epoise.ePoiseRecruiter.fragment.ManageUsersListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.TrainingOppListFragment;
 
 import java.util.ArrayList;
@@ -130,7 +131,7 @@ public class MainActivity extends AppCompatActivity
             title = getString(R.string.my_organization);
 
         } else if (id == R.id.nav_manage_users) {
-            fragment = new DashBoardFragment();
+            fragment = new ManageUsersListFragment();
             title = getString(R.string.manage_users);
 
         }else if (id == R.id.nav_vendor_report) {

@@ -7,7 +7,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/md_keylines"
                                     android:layout_marginBottom="@dimen/md_keylines"
-                                    android:elevation="200dp"
+                                    android:elevation="10dp"
                                     android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
@@ -44,7 +44,32 @@
             android:layout_height="150dp"
             android:layout_below="@+id/training_video_question_description"
             android:scaleType="centerCrop"
-            tools:src="@drawable/videoimage" />
+            tools:src="@drawable/videoplaybutton" />
+
+        <!--<Button-->
+            <!--android:id="@+id/response_rate_button"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/training_video_question_video_image"-->
+            <!--style="?android:attr/borderlessButtonStyle"-->
+            <!--android:textColor="?attr/colorPrimary"-->
+            <!--android:text="Rate for this response" />-->
+
+        <TextView
+            android:text="Response Rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoResponseRateView"
+            android:layout_below="@+id/training_video_question_video_image"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/response_rate_rating_bar"
+            android:layout_gravity="center"
+            android:layout_below="@+id/videoResponseRateView"
+            android:numStars="5" />
 
     </LinearLayout>
 

@@ -11,7 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.vinu.epoise.ePoiseRecruiter.activity.TrainingCandidateResponseActivity"
-    tools:showIn="@layout/activity_hiring_candidate_response">
+    tools:showIn="@layout/activity_training_candidate_response">
 
 
     <android.support.v7.widget.RecyclerView

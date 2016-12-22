@@ -3,16 +3,21 @@ package com.vinu.epoise.ePoiseRecruiter.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.design.widget.TabLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.vinu.epoise.ePoiseRecruiter.R;
@@ -95,6 +100,8 @@ public class TrainingCandidateResponseRecyclerViewAdapter extends RecyclerView.A
                         }
                     });
 
+                    ((TrainingVideoResponseViewHolder) holder).videoTypeRateResponseBar.getRating();
+
                     break;
                 case TRAINING_SINGLE_TYPE:
                     ((TrainingSingleChoiceResponseViewHolder) holder).singleTypeQuestionNo.setText("Question 1 of 1");
@@ -166,6 +173,10 @@ public class TrainingCandidateResponseRecyclerViewAdapter extends RecyclerView.A
         private TextView videoTypeQuestionName;
         private ImageView videoTypeImageView;
 
+        private Button videoTypeRateResponseButton;
+        private RatingBar videoTypeRateResponseBar;
+        private String statusMessage;
+
         private ItemClickListener mItemClickListener;
 
 
@@ -176,7 +187,11 @@ public class TrainingCandidateResponseRecyclerViewAdapter extends RecyclerView.A
             videoTypeQuestionName = (TextView) itemView.findViewById(R.id.training_video_question_description);
             videoTypeImageView =(ImageView) itemView.findViewById(R.id.training_video_question_video_image);
 
+            videoTypeRateResponseBar=(RatingBar) itemView.findViewById(R.id.response_rate_rating_bar);
+
             itemView.setOnClickListener(this);
+
+            videoTypeRateResponseBar.getRating();
         }
 
         @Override
@@ -186,6 +201,8 @@ public class TrainingCandidateResponseRecyclerViewAdapter extends RecyclerView.A
 
         public void setItemClickListener(ItemClickListener itemClickListener) {
             this.mItemClickListener = itemClickListener;
+
+
         }
     }
 
