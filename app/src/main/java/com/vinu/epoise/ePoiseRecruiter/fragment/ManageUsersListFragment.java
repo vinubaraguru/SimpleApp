@@ -49,40 +49,56 @@ public class ManageUsersListFragment extends Fragment {
 
         final ArrayList<ManageUsersList> manageUsersListArrayList = new ArrayList<>();
 
-        ManageUsersList manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        ManageUsersList manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
         manageUsersListArrayList.add(manageUsersList);
 
-        manageUsersList=new ManageUsersList("vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
         manageUsersListArrayList.add(manageUsersList);
 
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
+        manageUsersListArrayList.add(manageUsersList);
 
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersListArrayList.add(manageUsersList);
+
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
+        manageUsersListArrayList.add(manageUsersList);
+
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersListArrayList.add(manageUsersList);
+
+        manageUsersList=new ManageUsersList(ManageUsersList.ACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","Active");
+        manageUsersListArrayList.add(manageUsersList);
+
+        manageUsersList=new ManageUsersList(ManageUsersList.DEACTIVE_TYPE,"vinu@epoise.com","vinu@epoise.com","Vinu Baraguru","9880941079","OrgAdmin","DeActive");
+        manageUsersListArrayList.add(manageUsersList);
 
         return manageUsersListArrayList;
     }

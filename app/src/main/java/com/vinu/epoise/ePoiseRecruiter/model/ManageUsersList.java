@@ -8,6 +8,10 @@ import java.io.Serializable;
 
 public class ManageUsersList implements Serializable {
 
+    public static final int ACTIVE_TYPE = 0;
+    public static final int DEACTIVE_TYPE = 1;
+
+    private int manageUserResponseType;
     private String manageUserEmail;
     private String manageUserLoginID;
     private String manageUserDisplayName;
@@ -15,13 +19,22 @@ public class ManageUsersList implements Serializable {
     private String manageUserRole;
     private String manageUserStatus;
 
-    public ManageUsersList(String manageUserEmail, String manageUserLoginID, String manageUserDisplayName, String manageUserContactNo, String manageUserRole, String manageUserStatus) {
+    public ManageUsersList(int manageUserResponseType, String manageUserEmail, String manageUserLoginID, String manageUserDisplayName, String manageUserContactNo, String manageUserRole, String manageUserStatus) {
+        this.manageUserResponseType = manageUserResponseType;
         this.manageUserEmail = manageUserEmail;
         this.manageUserLoginID = manageUserLoginID;
         this.manageUserDisplayName = manageUserDisplayName;
         this.manageUserContactNo = manageUserContactNo;
         this.manageUserRole = manageUserRole;
         this.manageUserStatus = manageUserStatus;
+    }
+
+    public int getManageUserResponseType() {
+        return manageUserResponseType;
+    }
+
+    public void setManageUserResponseType(int manageUserResponseType) {
+        this.manageUserResponseType = manageUserResponseType;
     }
 
     public String getManageUserEmail() {
