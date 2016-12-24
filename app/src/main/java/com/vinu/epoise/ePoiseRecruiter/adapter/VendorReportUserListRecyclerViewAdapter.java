@@ -1,14 +1,18 @@
 package com.vinu.epoise.ePoiseRecruiter.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.vinu.epoise.ePoiseRecruiter.R;
+import com.vinu.epoise.ePoiseRecruiter.activity.VendorReportOpportunityDetailActivity;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
 import com.vinu.epoise.ePoiseRecruiter.model.VendorReportList;
 
@@ -49,20 +53,21 @@ public class VendorReportUserListRecyclerViewAdapter extends RecyclerView.Adapte
         holder.vendorTotalPreselects.setText(vendorReportList.getVendorTotalPreselects());
         holder.vendorTotalRejects.setText(vendorReportList.getVendorTotalRejects());
 
-//        holder.setItemClickListener(new ItemClickListener() {
-//            @Override
-//            public void onItemClick(View view, int Position) {
-//
-//                TrainingOppList trainingOppList=mTrainingOppListArrayList.get(Position);
-//
-//                TrainingOppList selectedTrainingOppList= getSelectedTrainingOppListArrayList(Position);
-//
-//                Intent intent=new Intent(mContext, TrainingOppDetailActivity.class);
-//                intent.putExtra("trainingOppTitle",selectedTrainingOppList.getTrainingOppTitle());
-//
-//                mContext.startActivity(intent);
-//            }
-//        });
+        holder.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onItemClick(View view, int Position) {
+
+                VendorReportList vendorReportList=mVendorReportListArrayList.get(Position);
+
+                VendorReportList selectedVendorReportList= getSelectedVendorReportList(Position);
+
+                Intent intent=new Intent(mContext, VendorReportOpportunityDetailActivity.class);
+                intent.putExtra("VendorUserName",selectedVendorReportList.getVendorUserName());
+
+                mContext.startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -70,7 +75,7 @@ public class VendorReportUserListRecyclerViewAdapter extends RecyclerView.Adapte
         return mVendorReportListArrayList.size();
     }
 
-    public VendorReportList getSelectedTrainingOppListArrayList(int position) {
+    public VendorReportList getSelectedVendorReportList(int position) {
         return mVendorReportListArrayList.get(position);
     }
 
@@ -84,6 +89,8 @@ public class VendorReportUserListRecyclerViewAdapter extends RecyclerView.Adapte
         public final TextView vendorTotalShortlists;
         public final TextView vendorTotalPreselects;
         public final TextView vendorTotalRejects;
+
+        public final Button vendorDetailButton;
 
 
         private ItemClickListener mItemClickListener;
@@ -100,8 +107,9 @@ public class VendorReportUserListRecyclerViewAdapter extends RecyclerView.Adapte
             vendorTotalShortlists = (TextView) itemView.findViewById(R.id.vendor_total_shortlist);
             vendorTotalPreselects = (TextView) itemView.findViewById(R.id.vendor_total_preselects);
             vendorTotalRejects = (TextView) itemView.findViewById(R.id.vendor_total_rejects);
+            vendorDetailButton=(Button) itemView.findViewById(R.id.vendor_opportunity_wise_detail_action_button);
 
-            itemView.setOnClickListener(this);
+            vendorDetailButton.setOnClickListener(this);
 
         }
 
