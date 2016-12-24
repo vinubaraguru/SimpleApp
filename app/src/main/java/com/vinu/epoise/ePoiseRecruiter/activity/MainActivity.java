@@ -21,6 +21,7 @@ import com.vinu.epoise.ePoiseRecruiter.fragment.HiringOppListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.InviteListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.ManageUsersListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.TrainingOppListFragment;
+import com.vinu.epoise.ePoiseRecruiter.fragment.VendorReportFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity
             title = getString(R.string.manage_users);
 
         }else if (id == R.id.nav_vendor_report) {
-            fragment = new DashBoardFragment();
+            fragment = new VendorReportFragment();
             title = getString(R.string.vendor_report);
 
         } else if (id == R.id.nav_evaluators_report) {

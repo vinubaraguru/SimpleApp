@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:card_view="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
@@ -14,203 +14,208 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="270dp"
+            android:id="@+id/vendor_report_user_info_layout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
-            <TextView
-                android:text="Shortlists"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vendor_total_shortlist_view"
-                android:layout_above="@+id/vendor_total_shortlist"
-                android:layout_toStartOf="@+id/vendor_total_preselects"
-                android:layout_alignTop="@+id/vendor_total_preselect_view"/>
+        <ImageView
+            android:id="@+id/vendor_user_name_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_email"/>
 
-            <TextView
-                android:text="Preselects"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vendor_total_preselect_view"
-                android:layout_above="@+id/vendor_total_preselects"
-                android:layout_alignStart="@+id/vendor_total_preselects"
-                android:layout_alignTop="@+id/vendor_total_response_view"/>
 
-            <TextView
-                android:text="  Invites"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vendor_total_invites_view"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="118dp"/>
+        <ImageView
+            android:id="@+id/vendor_user_email_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vendor_user_name_icon"
+            android:src="@drawable/ic_email"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="161"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_total_invites"
-                android:layout_below="@+id/vendor_total_shortlist_view"
-                android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/vendor_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/album_title_padding"
+            android:paddingRight="@dimen/album_title_padding"
+            android:paddingTop="@dimen/album_title_padding"
+            android:textColor="@color/album_title"
+            android:text="+91 9880941079"
+            android:textSize="@dimen/album_title"
+            android:layout_below="@+id/vendor_user_name"
+            android:layout_toEndOf="@+id/vendor_user_name_icon"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_total_rejects"
-                android:layout_below="@+id/vendor_total_preselect_view"
-                android:layout_toEndOf="@+id/vendor_total_preselect_view"
-                android:layout_marginStart="15dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_total_shortlist"
-                android:layout_alignBaseline="@+id/vendor_total_responses"
-                android:layout_alignBottom="@+id/vendor_total_responses"
-                android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:id="@+id/vendor_user_phone_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vendor_user_email_icon"
+            android:src="@drawable/ic_email"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_total_responses"
-                android:layout_below="@+id/vendor_total_response_view"
-                android:layout_toStartOf="@+id/vendor_total_shortlist"
-                android:layout_marginEnd="17dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_total_preselects"
-                android:layout_marginStart="15dp"
-                android:layout_alignBaseline="@+id/vendor_total_shortlist"
-                android:layout_alignBottom="@+id/vendor_total_shortlist"
-                android:layout_toEndOf="@+id/vendor_total_shortlist"/>
 
-            <TextView
-                android:text="Responses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vendor_total_response_view"
-                android:layout_alignBaseline="@+id/vendor_total_invites_view"
-                android:layout_alignBottom="@+id/vendor_total_invites_view"
-                android:layout_alignEnd="@+id/vendor_total_responses"/>
+        <TextView
+            android:id="@+id/vendor_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/album_title_padding"
+            android:paddingRight="@dimen/album_title_padding"
+            android:paddingTop="@dimen/album_title_padding"
+            android:textColor="@color/album_title"
+            android:text="vinu@gmail.com"
+            android:textSize="@dimen/album_title"
+            android:layout_below="@+id/vendor_user_email"
+            android:layout_toEndOf="@+id/vendor_user_email_icon"/>
 
-            <TextView
-                android:text="  Rejects"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vendor_total_rejects_view"
-                android:layout_above="@+id/vendor_total_rejects"
-                android:layout_alignStart="@+id/vendor_total_rejects"/>
+        <TextView
+            android:id="@+id/vendor_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/album_title_padding"
+            android:paddingRight="@dimen/album_title_padding"
+            android:paddingTop="@dimen/album_title_padding"
+            android:textColor="@color/album_title"
+            android:text="Vinu"
+            android:textSize="@dimen/album_title"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/vendor_user_name_icon"/>
+
+        <Button
+            android:id="@+id/vendor_opportunity_wise_detail_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="?attr/colorPrimary"
+            android:text="Opportunity wise detail"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+
+
+        <TextView
+            android:text="Total Invites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vendor_total_invites_view"
+            android:layout_above="@+id/vendor_user_email"
+            android:layout_alignEnd="@+id/vendor_total_invites" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="161"
+            android:textSize="30sp"
+            android:background="@drawable/rounded_textview"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@+id/vendor_total_invites"
+            android:layout_below="@+id/vendor_user_name_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="26dp" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="270dp"
-                android:id="@+id/vendor_report_user_info_layout"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true">
-
-                <ImageView
-                    android:id="@+id/vendor_user_name_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_email"/>
-
-
-                <ImageView
-                    android:id="@+id/vendor_user_email_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/vendor_user_name_icon"
-                    android:src="@drawable/ic_email"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="130dp">
 
                 <TextView
-                    android:id="@+id/vendor_user_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/album_title_padding"
-                    android:paddingRight="@dimen/album_title_padding"
-                    android:paddingTop="@dimen/album_title_padding"
-                    android:textColor="@color/album_title"
-                    android:text="+91 9880941079"
-                    android:textSize="@dimen/album_title"
-                    android:layout_below="@+id/vendor_user_name"
-                    android:layout_toEndOf="@+id/vendor_user_name_icon"/>
-
-
-                <ImageView
-                    android:id="@+id/vendor_user_phone_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/vendor_user_email_icon"
-                    android:src="@drawable/ic_email"/>
-
-
+                    android:text="9"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:id="@+id/vendor_total_responses"/>
 
                 <TextView
-                    android:id="@+id/vendor_user_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/album_title_padding"
-                    android:paddingRight="@dimen/album_title_padding"
-                    android:paddingTop="@dimen/album_title_padding"
-                    android:textColor="@color/album_title"
-                    android:text="vinu@gmail.com"
-                    android:textSize="@dimen/album_title"
-                    android:layout_below="@+id/vendor_user_email"
-                    android:layout_toEndOf="@+id/vendor_user_email_icon"/>
-
-                <TextView
-                    android:id="@+id/vendor_user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/album_title_padding"
-                    android:paddingRight="@dimen/album_title_padding"
-                    android:paddingTop="@dimen/album_title_padding"
-                    android:textColor="@color/album_title"
-                    android:text="Vinu"
-                    android:textSize="@dimen/album_title"
+                    android:text="3"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:id="@+id/vendor_total_shortlist"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/vendor_user_name_icon"/>
+                    android:layout_toEndOf="@+id/vendor_total_responses"
+                    android:layout_marginStart="16dp" />
 
-                <Button
-                    android:id="@+id/vendor_opportunity_wise_detail_action_button"
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:textColor="?attr/colorPrimary"
-                    android:text="Opportunity wise detail"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"/>
+                    android:text="4"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:id="@+id/vendor_total_preselects"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/vendor_total_shortlist"
+                    android:layout_marginStart="16dp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textSize="30sp"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:id="@+id/vendor_total_rejects"
+                    android:layout_marginStart="16dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/vendor_total_preselects" />
 
             </RelativeLayout>
 
-        </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="110dp">
+
+                <TextView
+                    android:text="Responses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vendor_total_response_view"/>
+
+                <TextView
+                    android:text="Shortlists"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vendor_total_shortlist_view"
+                    android:layout_toEndOf="@+id/vendor_total_response_view"
+                    android:layout_marginStart="16dp" />
+
+
+                <TextView
+                    android:text="Preselects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vendor_total_preselect_view"
+                    android:layout_toEndOf="@+id/vendor_total_shortlist_view"
+                    android:layout_marginStart="16dp" />
+
+
+                <TextView
+                    android:text="Rejects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vendor_total_rejects_view"
+                    android:layout_toEndOf="@+id/vendor_total_preselect_view"
+                    android:layout_marginStart="16dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 
