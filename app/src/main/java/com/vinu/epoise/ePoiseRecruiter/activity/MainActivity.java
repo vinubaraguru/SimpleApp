@@ -17,6 +17,7 @@ import android.view.MenuItem;
 
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.fragment.DashBoardFragment;
+import com.vinu.epoise.ePoiseRecruiter.fragment.EvaluatorReportFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.HiringOppListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.InviteListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.ManageUsersListFragment;
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity
             title = getString(R.string.vendor_report);
 
         } else if (id == R.id.nav_evaluators_report) {
-            fragment = new DashBoardFragment();
+            fragment = new EvaluatorReportFragment();
             title = getString(R.string.evaluators_report);
 
         } else if (id == R.id.nav_candidates_report) {

@@ -1,0 +1,183 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="50dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:id="@+id/evaluator_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/album_title"
+                android:text="Vinu"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/evaluator_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="vinu@gmail.com"
+                android:gravity="center"
+                android:layout_below="@+id/evaluator_user_name"
+                android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:text="Received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaluator_report_received"/>
+
+            <TextView
+                android:text="Evaluated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaluator_report_evaluated"
+                android:layout_toEndOf="@+id/evaluator_report_received"
+                android:layout_marginStart="16dp" />
+
+
+            <TextView
+                android:text="Pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaluator_report_pending"
+                android:layout_toEndOf="@+id/evaluator_report_evaluated"
+                android:layout_marginStart="16dp" />
+
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:id="@+id/evaluator_report_total_received"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:id="@+id/evaluator_report_total_evaluated"
+                    android:layout_toEndOf="@+id/evaluator_report_total_received"
+                    android:layout_marginStart="50dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:id="@+id/evaluator_report_total_pending"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/evaluator_report_total_evaluated"
+                    android:layout_marginStart="60dp" />
+
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="100dp">
+
+            <TextView
+                android:text="Shortlists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaluator_report_shortlist"/>
+
+            <TextView
+                android:text="Preselects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaluator_report_preselect"
+                android:layout_toEndOf="@+id/evaluator_report_shortlist"
+                android:layout_marginStart="16dp" />
+
+
+            <TextView
+                android:text="Rejects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/evaluator_report_reject"
+                android:layout_toEndOf="@+id/evaluator_report_preselect"
+                android:layout_marginStart="16dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="120dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/evaluator_report_total_shortlist"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/evaluator_report_total_preselect"
+                android:layout_toEndOf="@+id/evaluator_report_total_shortlist"
+                android:layout_marginStart="50dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/evaluator_report_total_reject"
+                android:layout_toEndOf="@+id/evaluator_report_total_preselect"
+                android:layout_marginStart="60dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
