@@ -45,13 +45,13 @@ public class VendorReportFragment extends Fragment {
 
         final ArrayList<VendorReportList> vendorReportListArrayList = new ArrayList<>();
 
-        VendorReportList vendorReportList=new VendorReportList("Vinu","vinu@gmail.com","9880941079","12","13","161","23","78");
+        VendorReportList vendorReportList=new VendorReportList("Vinu","vinu@gmail.com","9880941079","12","13","16","23","78");
         vendorReportListArrayList.add(vendorReportList);
 
-        vendorReportList=new VendorReportList("Vinu","vinu@gmail.com","9880941079","12","13","161","23","78");
+        vendorReportList=new VendorReportList("Vinu","vinu@gmail.com","9880941079","12","13","16","23","78");
         vendorReportListArrayList.add(vendorReportList);
 
-        vendorReportList=new VendorReportList("Vinu","vinu@gmail.com","9880941079","12","13","161","23","78");
+        vendorReportList=new VendorReportList("Vinu","vinu@gmail.com","9880941079","12","13","16","23","78");
         vendorReportListArrayList.add(vendorReportList);
 
         vendorReportList=new VendorReportList("Vinu","vinu@gmail.com","9880941079","12","13","161","23","78");

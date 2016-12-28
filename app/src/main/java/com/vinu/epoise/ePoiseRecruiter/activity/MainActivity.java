@@ -144,13 +144,13 @@ public class MainActivity extends AppCompatActivity
             fragment = new EvaluatorReportFragment();
             title = getString(R.string.evaluators_report);
 
-        } else if (id == R.id.nav_candidates_report) {
-            fragment = new DashBoardFragment();
-            title = getString(R.string.candidiate_report);
-
-        } else if (id == R.id.nav_position_based_report) {
-            fragment = new DashBoardFragment();
-            title = getString(R.string.position_based_report);
+//        } else if (id == R.id.nav_candidates_report) {
+//            fragment = new DashBoardFragment();
+//            title = getString(R.string.candidiate_report);
+//
+//        } else if (id == R.id.nav_position_based_report) {
+//            fragment = new DashBoardFragment();
+//            title = getString(R.string.position_based_report);
 
         } else if (id == R.id.nav_settings) {
 

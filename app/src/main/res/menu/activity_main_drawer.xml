@@ -40,14 +40,14 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Evaluators Report"/>
 
-            <item
-                android:id="@+id/nav_candidates_report"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Candidates Report"/>
-            <item
-                android:id="@+id/nav_position_based_report"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Positions Based Report"/>
+            <!--<item-->
+                <!--android:id="@+id/nav_candidates_report"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Candidates Report"/>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_position_based_report"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Positions Based Report"/>-->
 
             <item
                 android:id="@+id/nav_settings"

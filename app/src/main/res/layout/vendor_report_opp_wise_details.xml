@@ -16,139 +16,70 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
             <TextView
                 android:id="@+id/vendor_report_opp_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/md_keylines"
+                android:gravity="center"
                 tools:text="Softskill Assessment"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:textSize="@dimen/article_subheading"
                 android:layout_alignParentTop="true"/>
 
-
-        </RelativeLayout>
-
-
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:layout_marginTop="50dp">
-
-        <TextView
-            android:text="Invites"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/vendor_opp_invite_view"
-            android:layout_marginStart="90dp"/>
-
-        <TextView
-            android:text="Responses"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/vendor_opp_response_view"
-            android:layout_toEndOf="@+id/vendor_opp_invite_view"
-            android:layout_marginStart="24dp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:layout_marginTop="70dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9"
-            android:textSize="30sp"
-            android:background="@drawable/rounded_textview"
-            android:textColor="@android:color/white"
             android:gravity="center"
-            android:id="@+id/vendor_opp_invite"
-            android:layout_marginStart="90dp"/>
+            android:layout_marginTop="30dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:text="Invites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vendor_opp_invite_view"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vendor_opp_invite"
+                    android:text="9"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3"
-            android:textSize="30sp"
-            android:background="@drawable/rounded_textview"
-            android:textColor="@android:color/white"
             android:gravity="center"
-            android:id="@+id/vendor_opp_response"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/vendor_opp_invite"
-            android:layout_marginStart="24dp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="60dp"
-            android:layout_marginTop="160dp">
+            android:layout_marginTop="75dp">
 
             <TextView
+                android:text="Responses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_opp_shortlist"/>
+                android:id="@+id/vendor_opp_response_view"
+                android:layout_marginStart="16dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_opp_preslects"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/vendor_opp_shortlist"
-                android:layout_marginStart="24dp" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8"
-                android:textSize="30sp"
-                android:background="@drawable/rounded_textview"
-                android:textColor="@android:color/white"
-                android:gravity="center"
-                android:id="@+id/vendor_opp_rejects"
-                android:layout_marginStart="24dp"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/vendor_opp_preslects" />
-
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="60dp"
-            android:layout_marginTop="140dp">
 
             <TextView
                 android:text="Shortlists"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/vendor_opp_shortlist_view"/>
+                android:id="@+id/vendor_opp_shortlist_view"
+                android:layout_toEndOf="@+id/vendor_opp_response_view"
+                android:layout_marginStart="16dp" />
 
             <TextView
                 android:text="Preselects"
@@ -156,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/vendor_opp_preslect_view"
                 android:layout_toEndOf="@+id/vendor_opp_shortlist_view"
-                android:layout_marginStart="24dp" />
+                android:layout_marginStart="16dp" />
 
 
             <TextView
@@ -165,7 +96,57 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/vendor_opp_rejects_view"
                 android:layout_toEndOf="@+id/vendor_opp_preslect_view"
-                android:layout_marginStart="24dp" />
+                android:layout_marginStart="16dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="95dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vendor_opp_response"
+                android:text="9"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginStart="32dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vendor_opp_shortlist"
+                android:text="9"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_toEndOf="@+id/vendor_opp_response"
+                android:layout_marginStart="64dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vendor_opp_preslects"
+                android:text="9"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_toEndOf="@+id/vendor_opp_shortlist"
+                android:layout_marginStart="48dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vendor_opp_rejects"
+                android:text="9"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_toEndOf="@+id/vendor_opp_preslects"
+                android:layout_marginStart="48dp" />
 
 
         </RelativeLayout>
