@@ -27,7 +27,7 @@ public class InviteListFragment  extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.recycler_view, container, false);
+//        View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
         View view = inflater.inflate(R.layout.fragment_invite_opp_list, null);
 

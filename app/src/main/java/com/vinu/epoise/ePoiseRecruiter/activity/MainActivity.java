@@ -21,6 +21,8 @@ import com.vinu.epoise.ePoiseRecruiter.fragment.EvaluatorReportFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.HiringOppListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.InviteListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.ManageUsersListFragment;
+import com.vinu.epoise.ePoiseRecruiter.fragment.MyOrganizationFragment;
+import com.vinu.epoise.ePoiseRecruiter.fragment.SettingsFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.TrainingOppListFragment;
 import com.vinu.epoise.ePoiseRecruiter.fragment.VendorReportFragment;
 
@@ -129,7 +131,7 @@ public class MainActivity extends AppCompatActivity
             title = getString(R.string.training);
 
         } else if (id == R.id.nav_my_organization) {
-            fragment = new DashBoardFragment();
+            fragment = new MyOrganizationFragment();
             title = getString(R.string.my_organization);
 
         } else if (id == R.id.nav_manage_users) {
@@ -154,7 +156,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_settings) {
 
-            fragment = new DashBoardFragment();
+            fragment = new SettingsFragment();
             title = getString(R.string.settings);
 
         }

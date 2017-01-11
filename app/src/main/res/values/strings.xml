@@ -66,5 +66,13 @@
     <string name="title_activity_training_candidate_response">TrainingCandidateResponseActivity</string>
     <string name="title_activity_video_streaming">VideoStreamingActivity</string>
     <string name="title_activity_vendor_report_opp_list">VendorReportOpportunityDetailActivity</string>
+    <string name="change_password">Change Password</string>
+    <string name="title_activity_vendor_report_opportunity_detail">VendorReportOpportunityDetailActivity</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <string name="title_activity_webview">WebviewActivity</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="btn_change_password">Change Password</string>
 
 </resources>

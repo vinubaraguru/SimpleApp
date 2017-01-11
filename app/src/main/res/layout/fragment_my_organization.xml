@@ -1,0 +1,428 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="50dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Organization Details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:id="@+id/vendor_total_response_view"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/vendor_total_response_view"
+                android:background="#B6B6B6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp">
+
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:id="@+id/org_short_name_icon"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/org_short_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Short Name"
+                    android:textSize="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_short_name_icon"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="APSSDC"
+                    android:ems="10"
+                    android:textSize="13dp"
+                    android:id="@+id/org_short_name_title_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_short_name_title"
+                    android:background="#ffffff"
+                    android:padding="16dp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/org_short_name_title_text"
+                    android:background="#B6B6B6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="110dp">
+
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:id="@+id/org_full_name_icon"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/org_full_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textSize="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_full_name_icon"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Andra Pradesh Skill developement"
+                    android:ellipsize="end"
+                    android:ems="10"
+                    android:textSize="13dp"
+                    android:id="@+id/org_full_name_title_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_full_name_title"
+                    android:background="#ffffff"
+                    android:padding="16dp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/org_full_name_title_text"
+                    android:background="#B6B6B6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="170dp">
+
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:id="@+id/org_website_icon"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/org_website_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:textSize="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_website_icon"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="www.epoise.com"
+                    android:ems="10"
+                    android:textSize="13dp"
+                    android:id="@+id/org_website_title_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_website_title"
+                    android:background="#ffffff"
+                    android:padding="16dp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/org_website_title_text"
+                    android:background="#B6B6B6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="230dp">
+
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:id="@+id/org_user_domain_icon"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/org_user_domain_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User in domain"
+                    android:textSize="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_user_domain_icon"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="ePoise"
+                    android:ems="10"
+                    android:textSize="13dp"
+                    android:id="@+id/org_user_domain_title_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_user_domain_title"
+                    android:background="#ffffff"
+                    android:padding="16dp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/org_user_domain_title_text"
+                    android:background="#B6B6B6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="290dp">
+
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:id="@+id/org_contact_email_icon"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/org_contact_email_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_contact_email_icon"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="appsdc@epoise.com"
+                    android:ems="10"
+                    android:textSize="13dp"
+                    android:id="@+id/org_contact_email_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_contact_email_title"
+                    android:background="#ffffff"
+                    android:padding="16dp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/org_contact_email_text"
+                    android:background="#B6B6B6" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="350dp">
+
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email"
+                    android:id="@+id/org_contact_phone_icon"
+                    android:padding="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/org_contact_phone_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textSize="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_contact_phone_icon"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="9980941079"
+                    android:ems="10"
+                    android:textSize="13dp"
+                    android:id="@+id/org_contact_phone_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/org_contact_phone_title"
+                    android:background="#ffffff"
+                    android:padding="16dp"/>
+
+                <!--<View-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_below="@+id/org_contact_phone_text"-->
+                    <!--android:background="#B6B6B6" />-->
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="50dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+         <TextView
+            android:text="Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:id="@+id/org_description_title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/org_description_title"
+            android:background="#B6B6B6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="write description here....."
+                android:textSize="13dp"
+                android:ems="10"
+                android:id="@+id/org_description_text"
+                android:layout_alignParentTop="true"
+                android:background="#ffffff"
+                android:padding="16dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="50dp"
+        card_view:cardCornerRadius="@dimen/card_album_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:id="@+id/org_address_title"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/org_address_title"
+                android:background="#B6B6B6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:hint="write address here....."
+                    android:textSize="13dp"
+                    android:ems="10"
+                    android:id="@+id/org_address_text"
+                    android:layout_alignParentTop="true"
+                    android:background="#ffffff"
+                    android:padding="16dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:text="Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/org_update_button"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+</LinearLayout>
+</ScrollView>

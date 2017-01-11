@@ -1,6 +1,8 @@
 package com.vinu.epoise.ePoiseRecruiter.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -32,8 +34,13 @@ public class HiringCandidateResponseActivity extends AppCompatActivity implement
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Evaluation");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        CollapsingToolbarLayout collapsingToolbarLayout=(CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
+        collapsingToolbarLayout.setTitle("Evaluation");
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.transperent));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.rgb(255,255,255));
+
 
         rejectButton=(Button) findViewById(R.id.reject);
         shortListButton=(Button)findViewById(R.id.shortlist);
