@@ -27,7 +27,14 @@
                 tools:text="Softskill Assessment"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:textSize="@dimen/article_subheading"
+                android:paddingBottom="8dp"
                 android:layout_alignParentTop="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/vendor_report_opp_title"
+                android:background="#B6B6B6" />
 
         <RelativeLayout
             android:layout_width="match_parent"

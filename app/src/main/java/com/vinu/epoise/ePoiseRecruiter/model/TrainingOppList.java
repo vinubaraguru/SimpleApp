@@ -8,26 +8,50 @@ import java.io.Serializable;
 
 public class TrainingOppList implements Serializable {
 
-    private String trainingOppImage;
-    private String trainingOppTitle;
+//    private String trainingOppImage;
+//    private String trainingOppTitle;
+//
+//    public TrainingOppList(String trainingOppTitle) {
+//        this.trainingOppTitle = trainingOppTitle;
+//    }
+//
+//    public String getTrainingOppImage() {
+//        return trainingOppImage;
+//    }
+//
+//    public void setTrainingOppImage(String trainingOppImage) {
+//        this.trainingOppImage = trainingOppImage;
+//    }
+//
+//    public String getTrainingOppTitle() {
+//        return trainingOppTitle;
+//    }
+//
+//    public void setTrainingOppTitle(String trainingOppTitle) {
+//        this.trainingOppTitle = trainingOppTitle;
+//    }
 
-    public TrainingOppList(String trainingOppTitle) {
-        this.trainingOppTitle = trainingOppTitle;
+    private String name;
+    private String category;
+
+    public TrainingOppList(String name, String category) {
+        this.name = name;
+        this.category = category;
     }
 
-    public String getTrainingOppImage() {
-        return trainingOppImage;
+    public String getName() {
+        return name;
     }
 
-    public void setTrainingOppImage(String trainingOppImage) {
-        this.trainingOppImage = trainingOppImage;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTrainingOppTitle() {
-        return trainingOppTitle;
+    public String getCategory() {
+        return category;
     }
 
-    public void setTrainingOppTitle(String trainingOppTitle) {
-        this.trainingOppTitle = trainingOppTitle;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

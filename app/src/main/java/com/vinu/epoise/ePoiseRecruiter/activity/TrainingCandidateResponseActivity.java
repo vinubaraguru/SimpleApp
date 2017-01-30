@@ -1,6 +1,8 @@
 package com.vinu.epoise.ePoiseRecruiter.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -36,8 +38,12 @@ public class TrainingCandidateResponseActivity extends AppCompatActivity impleme
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Evaluation");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        CollapsingToolbarLayout collapsingToolbarLayout=(CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
+        collapsingToolbarLayout.setTitle("Evaluation");
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.transperent));
+        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.rgb(255,255,255));
 
         evaluateButton=(Button) findViewById(R.id.evaluate);
 
@@ -85,6 +91,9 @@ public class TrainingCandidateResponseActivity extends AppCompatActivity impleme
         mHiringCandidateResponseArrayList.add(trainingCandidateResponse);
 
         trainingCandidateResponse=new TrainingCandidateResponse(TrainingCandidateResponse.TRAINING_MULTI_TYPE,"Do you believe on Luck and do you depend on it?","http://www.androidbegin.com/tutorial/AndroidCommercial.3gp");
+        mHiringCandidateResponseArrayList.add(trainingCandidateResponse);
+
+        trainingCandidateResponse=new TrainingCandidateResponse(TrainingCandidateResponse.TRAINING_FEEDBACK_TYPE,"Do you believe on Luck and do you depend on it?","http://www.androidbegin.com/tutorial/AndroidCommercial.3gp");
         mHiringCandidateResponseArrayList.add(trainingCandidateResponse);
 
     }

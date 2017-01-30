@@ -30,7 +30,7 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/user_profile_photo"
+                    android:id="@+id/hiring_candidate_profile_photo"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_centerHorizontal="true"
@@ -45,8 +45,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="23dp"
                     android:gravity="center_horizontal"
-                    android:id="@+id/name"
-                    android:layout_below="@+id/user_profile_photo"
+                    android:id="@+id/hiring_candidate_name"
+                    android:layout_below="@+id/hiring_candidate_profile_photo"
                     android:layout_centerHorizontal="true"
                     android:text="Vinu Baraguru"/>
 
@@ -55,11 +55,11 @@
                     android:layout_height="wrap_content"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
-                    android:layout_below="@+id/name"
+                    android:layout_below="@+id/hiring_candidate_name"
                     android:gravity="center_horizontal">
 
                     <TextView
-                        android:id="@+id/tvNumber52"
+                        android:id="@+id/hiring_candidate_info"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
@@ -69,22 +69,22 @@
                         android:textColor="#212121" />
 
                     <TextView
-                        android:id="@+id/tvNumber53"
+                        android:id="@+id/hiring_candidate_info1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:text=" at "
-                        android:layout_toRightOf="@+id/tvNumber52"
+                        android:layout_toRightOf="@+id/hiring_candidate_info"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="#212121" />
                     <TextView
-                        android:id="@+id/tvNumber5"
+                        android:id="@+id/hiring_candidate_info3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:layout_toRightOf="@+id/tvNumber53"
+                        android:layout_toRightOf="@+id/hiring_candidate_info1"
                         android:text="ePoise systems"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="#212121" />
@@ -103,6 +103,7 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
+
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_hiring_candidate_response" />

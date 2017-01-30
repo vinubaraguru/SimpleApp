@@ -1,6 +1,8 @@
 package com.vinu.epoise.ePoiseRecruiter.adapter;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.squareup.picasso.Picasso;
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
@@ -66,9 +70,17 @@ public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
                 ((ActiveResponseViewHolder) holder).manageActiveUserStatus.setText(manageUsersList.getManageUserStatus());
                 ((ActiveResponseViewHolder) holder).manageActiveUserRole.setText(manageUsersList.getManageUserRole());
 
-                Picasso.with(((ActiveResponseViewHolder) holder).itemView.getContext())
-                        .load(R.drawable.messi)
-                        .into(((ActiveResponseViewHolder) holder).manageActiveUserAvatar);
+                String firstLetter = String.valueOf(manageUsersList.getManageUserDisplayName().charAt(0));
+                ColorGenerator generator = ColorGenerator.MATERIAL;
+                int color = generator.getRandomColor();
+                TextDrawable drawable = TextDrawable.builder()
+                        .buildRound(firstLetter, color); // radius in px
+
+                ((ActiveResponseViewHolder) holder).manageActiveUserAvatar.setImageDrawable(drawable);
+
+//                Picasso.with(((ActiveResponseViewHolder) holder).itemView.getContext())
+//                        .load(R.drawable.messi)
+//                        .into(((ActiveResponseViewHolder) holder).manageActiveUserAvatar);
 
                 break;
 
@@ -79,9 +91,17 @@ public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
                 ((DeActiveResponseViewHolder) holder).manageDeActiveUserStatus.setText(manageUsersList.getManageUserStatus());
                 ((DeActiveResponseViewHolder) holder).manageDeActiveUserRole.setText(manageUsersList.getManageUserRole());
 
-                Picasso.with(((DeActiveResponseViewHolder) holder).itemView.getContext())
-                        .load(R.drawable.messi)
-                        .into(((DeActiveResponseViewHolder) holder).manageDeActiveUserAvatar);
+                String firstLetter1 = String.valueOf(manageUsersList.getManageUserDisplayName().charAt(0));
+                ColorGenerator generator1 = ColorGenerator.MATERIAL;
+                int color1 = generator1.getRandomColor();
+                TextDrawable drawable1 = TextDrawable.builder()
+                        .buildRound(firstLetter1, color1); // radius in px
+
+                ((DeActiveResponseViewHolder) holder).manageDeActiveUserAvatar.setImageDrawable(drawable1);
+
+//                Picasso.with(((DeActiveResponseViewHolder) holder).itemView.getContext())
+//                        .load(R.drawable.messi)
+//                        .into(((DeActiveResponseViewHolder) holder).manageDeActiveUserAvatar);
 
                 break;
             }
@@ -132,8 +152,27 @@ public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
             manageDeActiveUserButton.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    Toast.makeText(view.getContext(),"USER ACTIVATED",Toast.LENGTH_SHORT).show();
+                public void onClick(final View view) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(
+                            view.getContext());
+                    builder.setTitle("Manage User");
+                    builder.setMessage("Do you want activate this user");
+                    builder.setPositiveButton("Yes, Activate",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Toast.makeText(view.getContext(),"User activated",Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                    builder.setNeutralButton("No",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Toast.makeText(view.getContext(),"User still deactivate",Toast.LENGTH_LONG).show();
+                                }
+                            });
+                    builder.show();
                 }
             });
         }
@@ -173,8 +212,28 @@ public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
             manageActiveUserButton.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    Toast.makeText(view.getContext(),"USER DEACTIVATED",Toast.LENGTH_SHORT).show();
+                public void onClick(final View view) {
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(
+                            view.getContext());
+                    builder.setTitle("Manage User");
+                    builder.setMessage("Do you want deactivate this user");
+                    builder.setPositiveButton("Yes, Deactivate",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Toast.makeText(view.getContext(),"User deactivated",Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                    builder.setNeutralButton("No",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Toast.makeText(view.getContext(),"User still active",Toast.LENGTH_LONG).show();
+                                }
+                            });
+                    builder.show();
                 }
             });
 

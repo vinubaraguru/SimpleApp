@@ -8,36 +8,60 @@ import java.io.Serializable;
 
 public class InviteOppList implements Serializable {
 
-    private String oppImage;
-    private String oppTitle;
-    private String oppPublishedDate;
+//    private String oppImage;
+//    private String oppTitle;
+//    private String oppPublishedDate;
+//
+//    public InviteOppList(String oppTitle, String oppPublishedDate) {
+//        this.oppTitle = oppTitle;
+//        this.oppPublishedDate = oppPublishedDate;
+//    }
+//
+//    public String getOppImage() {
+//        return oppImage;
+//    }
+//
+//    public void setOppImage(String oppImage) {
+//        this.oppImage = oppImage;
+//    }
+//
+//    public String getOppTitle() {
+//        return oppTitle;
+//    }
+//
+//    public void setOppTitle(String oppTitle) {
+//        this.oppTitle = oppTitle;
+//    }
+//
+//    public String getOppPublishedDate() {
+//        return oppPublishedDate;
+//    }
+//
+//    public void setOppPublishedDate(String oppPublishedDate) {
+//        this.oppPublishedDate = oppPublishedDate;
+//    }
 
-    public InviteOppList(String oppTitle, String oppPublishedDate) {
-        this.oppTitle = oppTitle;
-        this.oppPublishedDate = oppPublishedDate;
+    private String name;
+    private String category;
+
+    public InviteOppList(String name, String category) {
+        this.name = name;
+        this.category = category;
     }
 
-    public String getOppImage() {
-        return oppImage;
+    public String getName() {
+        return name;
     }
 
-    public void setOppImage(String oppImage) {
-        this.oppImage = oppImage;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getOppTitle() {
-        return oppTitle;
+    public String getCategory() {
+        return category;
     }
 
-    public void setOppTitle(String oppTitle) {
-        this.oppTitle = oppTitle;
-    }
-
-    public String getOppPublishedDate() {
-        return oppPublishedDate;
-    }
-
-    public void setOppPublishedDate(String oppPublishedDate) {
-        this.oppPublishedDate = oppPublishedDate;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

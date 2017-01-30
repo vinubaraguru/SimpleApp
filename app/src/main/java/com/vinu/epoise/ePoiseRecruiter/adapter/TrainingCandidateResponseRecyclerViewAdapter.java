@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -28,6 +29,7 @@ import com.vinu.epoise.ePoiseRecruiter.model.TrainingCandidateResponse;
 
 import java.util.ArrayList;
 
+import static com.vinu.epoise.ePoiseRecruiter.model.TrainingCandidateResponse.TRAINING_FEEDBACK_TYPE;
 import static com.vinu.epoise.ePoiseRecruiter.model.TrainingCandidateResponse.TRAINING_MULTI_TYPE;
 import static com.vinu.epoise.ePoiseRecruiter.model.TrainingCandidateResponse.TRAINING_SINGLE_TYPE;
 import static com.vinu.epoise.ePoiseRecruiter.model.TrainingCandidateResponse.TRAINING_VIDEO_TYPE;
@@ -64,6 +66,10 @@ public class TrainingCandidateResponseRecyclerViewAdapter extends RecyclerView.A
             case TRAINING_MULTI_TYPE:
                 view = LayoutInflater.from(parent.getContext()).inflate(R.layout.training_multiple_choice_response_list, parent, false);
                 return new TrainingMultipleChoiceResponseViewHolder(view);
+
+            case TRAINING_FEEDBACK_TYPE:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.training_candidate_feedback_card, parent, false);
+                return new TrainingFeedbackResponseViewHolder(view);
         }
         return null;
     }
@@ -138,6 +144,9 @@ public class TrainingCandidateResponseRecyclerViewAdapter extends RecyclerView.A
 
                     }
                     break;
+
+                case TRAINING_FEEDBACK_TYPE:
+                    ((TrainingFeedbackResponseViewHolder) holder).feedbackTextView.getText();
 
             }
         }
@@ -234,6 +243,18 @@ public class TrainingCandidateResponseRecyclerViewAdapter extends RecyclerView.A
             multiTypeQuestionName = (TextView) itemView.findViewById(R.id.training_multiple_choice_question_description);
             multiTypeOptionLayout= (LinearLayout) itemView.findViewById(R.id.training_multiple_choice_options_layout);
 
+        }
+    }
+
+    public static class TrainingFeedbackResponseViewHolder extends RecyclerView.ViewHolder {
+
+        private EditText feedbackTextView;
+
+
+        public TrainingFeedbackResponseViewHolder(View itemView) {
+            super(itemView);
+
+            feedbackTextView = (EditText) itemView.findViewById(R.id.training_candidate_feedback_text);
         }
     }
 }

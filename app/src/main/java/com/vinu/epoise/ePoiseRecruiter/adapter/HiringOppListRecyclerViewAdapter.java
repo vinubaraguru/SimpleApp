@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.activity.HiringOppDetailActivity;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
@@ -26,9 +28,14 @@ public class HiringOppListRecyclerViewAdapter extends RecyclerView.Adapter<Hirin
     Context mContext;
     ArrayList<HiringOppList> mHiringOppListArrayList;
 
-    public HiringOppListRecyclerViewAdapter(Context mContext, ArrayList<HiringOppList> mHiringOppListArrayList) {
+//    public HiringOppListRecyclerViewAdapter(Context mContext, ArrayList<HiringOppList> mHiringOppListArrayList) {
+//        this.mContext = mContext;
+//        this.mHiringOppListArrayList = mHiringOppListArrayList;
+//    }
+
+    public HiringOppListRecyclerViewAdapter(Context mContext) {
         this.mContext = mContext;
-        this.mHiringOppListArrayList = mHiringOppListArrayList;
+        mHiringOppListArrayList = new ArrayList<>();
     }
 
     @Override
@@ -44,11 +51,20 @@ public class HiringOppListRecyclerViewAdapter extends RecyclerView.Adapter<Hirin
 
         HiringOppList hiringOppList = mHiringOppListArrayList.get(position);
 
-        holder.hiringOppName.setText(hiringOppList.getOppTitle());
+//        holder.hiringOppName.setText(hiringOppList.getOppTitle());
+        holder.hiringOppName.setText(hiringOppList.getName());
 
-        Picasso.with(holder.itemView.getContext())
-                .load(R.drawable.messi)
-                .into(holder.hiringOppImage);
+        String firstLetter = String.valueOf(hiringOppList.getName().charAt(0));
+        ColorGenerator generator = ColorGenerator.MATERIAL;
+        int color = generator.getRandomColor();
+        TextDrawable drawable = TextDrawable.builder()
+                .buildRound(firstLetter, color); // radius in px
+
+        holder.hiringOppImage.setImageDrawable(drawable);
+
+//        Picasso.with(holder.itemView.getContext())
+//                .load(R.drawable.messi)
+//                .into(holder.hiringOppImage);
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
@@ -59,7 +75,7 @@ public class HiringOppListRecyclerViewAdapter extends RecyclerView.Adapter<Hirin
                 HiringOppList selectedHiringOppList= getSelectedHiringOppListArrayList(Position);
 
                 Intent intent=new Intent(mContext, HiringOppDetailActivity.class);
-                intent.putExtra("hiringOppTitle",selectedHiringOppList.getOppTitle());
+                intent.putExtra("hiringOppTitle",selectedHiringOppList.getName());
 
                 mContext.startActivity(intent);
             }
@@ -73,6 +89,11 @@ public class HiringOppListRecyclerViewAdapter extends RecyclerView.Adapter<Hirin
 
     public HiringOppList getSelectedHiringOppListArrayList(int position) {
         return mHiringOppListArrayList.get(position);
+    }
+
+    public void addHiringOppList(HiringOppList hiringOppList) {
+        mHiringOppListArrayList.add(hiringOppList);
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

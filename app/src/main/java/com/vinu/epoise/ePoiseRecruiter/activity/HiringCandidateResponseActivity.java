@@ -62,7 +62,7 @@ public class HiringCandidateResponseActivity extends AppCompatActivity implement
     private void prepareListData() {
 
 
-        HiringCandidateResponse hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.VIDEO_TYPE,"Do you believe on Luck and do you depend on it?","http://www.androidbegin.com/tutorial/AndroidCommercial.3gp");
+        HiringCandidateResponse hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.VIDEO_TYPE,"Do you believe on Luck and do you depend on it?","https://s3-ap-southeast-1.amazonaws.com/epoise-prod-whitelabel-hpjobs-videos/Compressed_Response_58243ab578818f242f148749_58182e8b4a83447f64721ae6_1a1af7ed8dd8dda8cbdf0815.mp4");
         mHiringCandidateResponseArrayList.add(hiringCandidateResponse);
 
         hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.MULTI_TYPE,"Please respond to the following question in Hindi.Do you believe on Luck and do you depend on it?","B");
@@ -71,7 +71,7 @@ public class HiringCandidateResponseActivity extends AppCompatActivity implement
         hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.SINGLE_TYPE,"Do you believe on Luck and do you depend on it?","C");
         mHiringCandidateResponseArrayList.add(hiringCandidateResponse);
 
-        hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.VIDEO_TYPE,"Then scroll back up and start reading the text. like this easy to bear","http://www.androidbegin.com/tutorial/AndroidCommercial.3gp");
+        hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.VIDEO_TYPE,"Then scroll back up and start reading the text. like this easy to bear","https://s3-ap-southeast-1.amazonaws.com/epoise-prod-whitelabel-hpjobs-videos/Compressed_Response_58243ab578818f242f148749_58182e8b4a83447f64721ae6_1a1af7ed8dd8dda8cbdf0815.mp4");
         mHiringCandidateResponseArrayList.add(hiringCandidateResponse);
 
         hiringCandidateResponse=new HiringCandidateResponse(HiringCandidateResponse.SINGLE_TYPE,"Your audio and video will both get recorded.After a winter in the south of France one don't find arctic weather","E");

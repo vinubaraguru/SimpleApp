@@ -8,26 +8,51 @@ import java.io.Serializable;
 
 public class  HiringOppList implements Serializable {
 
-    private String oppImage;
-    private String oppTitle;
+//    private String oppImage;
+//    private String oppTitle;
+//
+//    public HiringOppList(String oppTitle) {
+//        this.oppTitle = oppTitle;
+//    }
+//
+//    public String getOppImage() {
+//        return oppImage;
+//    }
+//
+//    public void setOppImage(String oppImage) {
+//        this.oppImage = oppImage;
+//    }
+//
+//    public String getOppTitle() {
+//        return oppTitle;
+//    }
+//
+//    public void setOppTitle(String oppTitle) {
+//        this.oppTitle = oppTitle;
+//    }
 
-    public HiringOppList(String oppTitle) {
-        this.oppTitle = oppTitle;
+
+    private String name;
+    private String category;
+
+    public HiringOppList(String name, String category) {
+        this.name = name;
+        this.category = category;
     }
 
-    public String getOppImage() {
-        return oppImage;
+    public String getName() {
+        return name;
     }
 
-    public void setOppImage(String oppImage) {
-        this.oppImage = oppImage;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getOppTitle() {
-        return oppTitle;
+    public String getCategory() {
+        return category;
     }
 
-    public void setOppTitle(String oppTitle) {
-        this.oppTitle = oppTitle;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

@@ -12,6 +12,7 @@ public class TrainingCandidateResponse implements Serializable {
     public static final int TRAINING_SINGLE_TYPE = 1;
     public static final int TRAINING_MULTI_TYPE = 2;
     public static final int TRAINING_WRITTEN_TYPE = 3;
+    public static final int TRAINING_FEEDBACK_TYPE = 4;
 
 
     private int trainingResponseType;

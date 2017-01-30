@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
 import com.vinu.epoise.ePoiseRecruiter.model.InvitedCandidateList;
@@ -26,9 +28,14 @@ public class InvitedCandidateListRecyclerViewAdapter extends
     Context mContext;
     ArrayList<InvitedCandidateList> mInvitedCandidateListArrayList;
 
-    public InvitedCandidateListRecyclerViewAdapter(Context context, ArrayList<InvitedCandidateList> invitedCandidateListArrayList) {
-        mContext = context;
-        mInvitedCandidateListArrayList = invitedCandidateListArrayList;
+//    public InvitedCandidateListRecyclerViewAdapter(Context context, ArrayList<InvitedCandidateList> invitedCandidateListArrayList) {
+//        mContext = context;
+//        mInvitedCandidateListArrayList = invitedCandidateListArrayList;
+//    }
+
+    public InvitedCandidateListRecyclerViewAdapter(Context mContext) {
+        this.mContext = mContext;
+        mInvitedCandidateListArrayList = new ArrayList<>();
     }
 
     @Override
@@ -44,12 +51,27 @@ public class InvitedCandidateListRecyclerViewAdapter extends
     public void onBindViewHolder(InvitedCandidateListRecyclerViewAdapter.ViewHolder holder, final int position) {
         InvitedCandidateList invitedCandidateList = mInvitedCandidateListArrayList.get(position);
 
-        holder.invitedCandidateName.setText(invitedCandidateList.getCandidateName());
-        holder.invitedCandidateEmail.setText(invitedCandidateList.getCandidateEmailID());
+//        holder.invitedCandidateName.setText(invitedCandidateList.getCandidateName());
+//        holder.invitedCandidateEmail.setText(invitedCandidateList.getCandidateEmailID());
 
-        Picasso.with(holder.itemView.getContext())
-                .load(R.drawable.messi)
-                .into(holder.invitedCandidateImage);
+        holder.invitedCandidateName.setText(invitedCandidateList.getLogin());
+        holder.invitedCandidateEmail.setText(invitedCandidateList.getType());
+
+
+        if(invitedCandidateList.getAvatar_url()==null){
+            String firstLetter = String.valueOf(invitedCandidateList.getLogin().charAt(0));
+            ColorGenerator generator = ColorGenerator.MATERIAL;
+            int color = generator.getRandomColor();
+            TextDrawable drawable = TextDrawable.builder()
+                    .buildRound(firstLetter, color); // radius in px
+
+            holder.invitedCandidateImage.setImageDrawable(drawable);
+
+        }else{
+            Picasso.with(holder.itemView.getContext())
+                    .load(invitedCandidateList.getAvatar_url())
+                    .into(holder.invitedCandidateImage);
+        }
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
@@ -59,7 +81,7 @@ public class InvitedCandidateListRecyclerViewAdapter extends
 
                 InvitedCandidateList selectedInvitedCandidateList= getSelectedInvitedCandidateListArrayList(Position);
 
-                Toast.makeText(mContext,invitedCandidateList.getCandidateName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext,invitedCandidateList.getLogin(),Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -73,6 +95,11 @@ public class InvitedCandidateListRecyclerViewAdapter extends
 
     public InvitedCandidateList getSelectedInvitedCandidateListArrayList(int position) {
         return mInvitedCandidateListArrayList.get(position);
+    }
+
+    public void addInvitedCandidate(InvitedCandidateList invitedCandidateList) {
+        mInvitedCandidateListArrayList.add(invitedCandidateList);
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

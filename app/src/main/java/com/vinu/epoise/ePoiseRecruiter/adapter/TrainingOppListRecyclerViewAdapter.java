@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.activity.TrainingOppDetailActivity;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
@@ -26,9 +28,14 @@ public class TrainingOppListRecyclerViewAdapter extends RecyclerView.Adapter<Tra
     Context mContext;
     ArrayList<TrainingOppList> mTrainingOppListArrayList;
 
-    public TrainingOppListRecyclerViewAdapter(Context context, ArrayList<TrainingOppList> trainingOppListArrayList) {
-        mContext = context;
-        mTrainingOppListArrayList = trainingOppListArrayList;
+//    public TrainingOppListRecyclerViewAdapter(Context context, ArrayList<TrainingOppList> trainingOppListArrayList) {
+//        mContext = context;
+//        mTrainingOppListArrayList = trainingOppListArrayList;
+//    }
+
+    public TrainingOppListRecyclerViewAdapter(Context mContext) {
+        this.mContext = mContext;
+        mTrainingOppListArrayList = new ArrayList<>();
     }
 
     @Override
@@ -44,11 +51,21 @@ public class TrainingOppListRecyclerViewAdapter extends RecyclerView.Adapter<Tra
 
         TrainingOppList trainingOppList = mTrainingOppListArrayList.get(position);
 
-        holder.trainingOppName.setText(trainingOppList.getTrainingOppTitle());
+//        holder.trainingOppName.setText(trainingOppList.getTrainingOppTitle());
 
-        Picasso.with(holder.itemView.getContext())
-                .load(R.drawable.messi)
-                .into(holder.trainingOppImage);
+        holder.trainingOppName.setText(trainingOppList.getName());
+
+        String firstLetter = String.valueOf(trainingOppList.getName().charAt(0));
+        ColorGenerator generator = ColorGenerator.MATERIAL;
+        int color = generator.getRandomColor();
+        TextDrawable drawable = TextDrawable.builder()
+                .buildRound(firstLetter, color); // radius in px
+
+        holder.trainingOppImage.setImageDrawable(drawable);
+
+//        Picasso.with(holder.itemView.getContext())
+//                .load(R.drawable.messi)
+//                .into(holder.trainingOppImage);
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
@@ -59,7 +76,7 @@ public class TrainingOppListRecyclerViewAdapter extends RecyclerView.Adapter<Tra
                 TrainingOppList selectedTrainingOppList= getSelectedTrainingOppListArrayList(Position);
 
                 Intent intent=new Intent(mContext, TrainingOppDetailActivity.class);
-                intent.putExtra("trainingOppTitle",selectedTrainingOppList.getTrainingOppTitle());
+                intent.putExtra("trainingOppTitle",selectedTrainingOppList.getName());
 
                 mContext.startActivity(intent);
             }
@@ -73,6 +90,11 @@ public class TrainingOppListRecyclerViewAdapter extends RecyclerView.Adapter<Tra
 
     public TrainingOppList getSelectedTrainingOppListArrayList(int position) {
         return mTrainingOppListArrayList.get(position);
+    }
+
+    public void addTraingOppList(TrainingOppList trainingOppList) {
+        mTrainingOppListArrayList.add(trainingOppList);
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{

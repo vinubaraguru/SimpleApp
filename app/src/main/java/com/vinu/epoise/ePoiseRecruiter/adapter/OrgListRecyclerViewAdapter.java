@@ -10,8 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.activity.MainActivity;
+import com.vinu.epoise.ePoiseRecruiter.activity.OrganizationListActivity;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
 import com.vinu.epoise.ePoiseRecruiter.model.OrganizationList;
 import com.squareup.picasso.Picasso;
@@ -27,10 +30,15 @@ public class OrgListRecyclerViewAdapter extends RecyclerView.Adapter<OrgListRecy
     private Context mContext;
     private ArrayList<OrganizationList> mOrganizationListArrayList;
 
-    public OrgListRecyclerViewAdapter(Context context, ArrayList<OrganizationList> organizationListArrayList) {
-        mContext = context;
-        mOrganizationListArrayList = organizationListArrayList;
+    public OrgListRecyclerViewAdapter(Context mContext) {
+        this.mContext = mContext;
+        mOrganizationListArrayList = new ArrayList<>();
     }
+
+//    public OrgListRecyclerViewAdapter(Context context, ArrayList<OrganizationList> organizationListArrayList) {
+//        mContext = context;
+//        mOrganizationListArrayList = organizationListArrayList;
+//    }
 
     @Override
     public OrgListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -47,12 +55,23 @@ public class OrgListRecyclerViewAdapter extends RecyclerView.Adapter<OrgListRecy
 
         OrganizationList organizationList=mOrganizationListArrayList.get(position);
 
-        holder.orgName.setText(organizationList.getOrgName());
-        holder.orgType.setText(organizationList.getOrgType());
+//        holder.orgName.setText(organizationList.getOrgName());
+//        holder.orgType.setText(organizationList.getOrgType());
 
-        Picasso.with(holder.itemView.getContext())
-                .load(R.drawable.messi)
-                .into(holder.orgImage);
+        holder.orgName.setText(organizationList.getName());
+        holder.orgType.setText(organizationList.getCategory());
+
+        String firstLetter = String.valueOf(organizationList.getName().charAt(0));
+        ColorGenerator generator = ColorGenerator.MATERIAL;
+        int color = generator.getRandomColor();
+        TextDrawable drawable = TextDrawable.builder()
+                .buildRound(firstLetter, color); // radius in px
+
+        holder.orgImage.setImageDrawable(drawable);
+
+//        Picasso.with(holder.itemView.getContext())
+//                .load(R.drawable.messi)
+//                .into(holder.orgImage);
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
@@ -63,9 +82,9 @@ public class OrgListRecyclerViewAdapter extends RecyclerView.Adapter<OrgListRecy
                 OrganizationList selectedOrganization= getSelectedOrganization(Position);
 
                 Intent intent=new Intent(mContext, MainActivity.class);
-                intent.putExtra("orgName",selectedOrganization.getOrgName());
+                intent.putExtra("orgName",selectedOrganization.getName());
 
-                Toast.makeText(mContext,selectedOrganization.getOrgName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext,selectedOrganization.getName(),Toast.LENGTH_SHORT).show();
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
@@ -82,6 +101,11 @@ public class OrgListRecyclerViewAdapter extends RecyclerView.Adapter<OrgListRecy
 
     public OrganizationList getSelectedOrganization(int position) {
         return mOrganizationListArrayList.get(position);
+    }
+
+    public void addOrganization(OrganizationList organizationList) {
+        mOrganizationListArrayList.add(organizationList);
+        notifyDataSetChanged();
     }
 
     public class OrgListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

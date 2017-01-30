@@ -66,6 +66,9 @@ public class SettingsFragment  extends Fragment {
         settingsList=new SettingsList("Privacy Policy");
         settingsLists.add(settingsList);
 
+        settingsList=new SettingsList("Logout");
+        settingsLists.add(settingsList);
+
 
         return settingsLists;
     }

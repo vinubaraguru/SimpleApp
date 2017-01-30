@@ -6,12 +6,12 @@
     android:background="?android:attr/selectableItemBackground"
     android:padding="@dimen/md_keylines">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/invited_cand_image"
         android:layout_width="@dimen/avator_size"
         android:layout_height="@dimen/avator_size"
         android:scaleType="centerCrop"
-        tools:src="@drawable/messi" />
+        android:src="@drawable/ic_account_circle_black_36dp"/>
 
     <TextView
         android:id="@+id/invited_cand_name"

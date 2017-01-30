@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.vinu.epoise.ePoiseRecruiter.R;
 import com.vinu.epoise.ePoiseRecruiter.activity.ChangePasswordActivity;
+import com.vinu.epoise.ePoiseRecruiter.activity.LoginActivity;
 import com.vinu.epoise.ePoiseRecruiter.activity.WebviewActivity;
 import com.vinu.epoise.ePoiseRecruiter.helper.ItemClickListener;
 import com.vinu.epoise.ePoiseRecruiter.model.SettingsList;
@@ -71,15 +72,16 @@ public class SettingsRecyclerViewAdapter extends RecyclerView.Adapter<SettingsRe
 
                 } else if (Position == 1) {
 
-                    Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                    Intent sendIntent = new Intent(Intent.ACTION_SENDTO);
                     sendIntent.setType("plain/text");
-                    sendIntent.setData(Uri.parse("support@skyore.com"));
-                    sendIntent.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
-                    sendIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@skyore.com"});
-                    sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Feed back for skyore app");
-
+                    sendIntent.setData(Uri.parse("mailto:support@epoise.com")); // only email apps should handle this
+                    sendIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@epoise.com"});
+                    sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Feed back for ePoise Recruiter app");
                     sendIntent.putExtra(Intent.EXTRA_TEXT, getDeviceDetails());
-                    mContext.startActivity(sendIntent);
+                    if (sendIntent.resolveActivity(mContext.getPackageManager()) != null) {
+                        mContext.startActivity(sendIntent);
+                    }
+
                 } else if (Position == 2) {
 
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
@@ -103,6 +105,11 @@ public class SettingsRecyclerViewAdapter extends RecyclerView.Adapter<SettingsRe
                     Intent intent = new Intent(mContext, WebviewActivity.class);
                     intent.putExtra("pageTitle","Privacy Policy");
                     intent.putExtra("pageUrl","https://developer.android.com/guide/webapps/webview.html");
+                    mContext.startActivity(intent);
+                } else if (Position == 5) {
+
+                    Intent intent = new Intent(mContext, LoginActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext.startActivity(intent);
                 }
             }
